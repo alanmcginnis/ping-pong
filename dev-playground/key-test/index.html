@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Key Test</title>
+</head>
+<body>
+  <p>Press keys on the keyboard to see what the KeyboardEvent's key and code
+     values are for each one.</p>
+  <div id="output"></div>
+  <script type="text/javascript">
+  	window.addEventListener("keydown", function(event) {
+    let str = "KeyboardEvent: key='" + event.key + "' | code='" +
+              event.code + "'";
+    let el = document.createElement("span");
+    el.innerHTML = str + "<br/>";
+
+    document.getElementById("output").appendChild(el);
+  }, true);
+  </script>
+</body>
+</html>
