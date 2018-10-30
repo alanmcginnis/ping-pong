@@ -21,6 +21,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
     "pump": "^3.0.0",
-    "uglify-es": "^3.3.9"
+    "uglify-es": "^3.3.9",
+    "minimatch": ">=3.0.2"
   }
 }
