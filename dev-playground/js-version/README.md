@@ -13,8 +13,8 @@ npm run build
 
 /css - sass includes and fonts.
 
-* master.scss compiles to min/master.min.js 
+* master.scss compiles to min/master.min.js
 
 /js - js includes
 
-* master.js compiles to master.min.js 
+* master.js compiles to min/master.min.js 
