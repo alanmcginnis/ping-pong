@@ -1,0 +1,119 @@
+/***--- Globals ---***/
+body {
+  color: $white;
+  font-family: $font;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#sb--wrapper {
+  background-color: $black;
+  height: 100vh;
+  text-align: center;
+}
+/***--- Playing to Score ---***/
+#sb--win-score {
+  background-color: $white;
+  color: $black;
+  font-size: $win-score-font-size;
+  height: $score-box-wh;
+  left: calc(50% - (#{$score-box-wh} / 2));
+  position: absolute;
+  width: $score-box-wh;
+  z-index: 1000;
+}
+/***--- Left ---***/
+#sb--left {
+  border-right: 1px solid $white;
+  float: left;
+  font-size: $score-font-size;
+  height: 100vh;
+  line-height: 100vh;
+  width: calc(50% - 1px);
+}
+
+div#left-increase {
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  z-index: 999;
+}
+
+div#left-decrease {
+  bottom: 0;
+  height: 50vh;
+  position: absolute;
+  width: 50%;
+  z-index: 999;
+}
+/***--- Right ---***/
+#sb--right {
+  border-left: 1px solid $white;
+  float: right;
+  font-size: $score-font-size;
+  height: 100vh;
+  line-height: 100vh;
+  width: calc(50% - 1px);
+}
+
+div#right-increase {
+  height: 50vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  z-index: 999;
+}
+
+div#right-decrease {
+  bottom: 0;
+  height: 50vh;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  z-index: 999;
+}
+/***--- Animations ---***/
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+/***--- Winner ---***/
+.winner {
+  background-color: $yellow;
+  color: $blue;
+
+  &.score {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    backface-visibility: hidden;
+    display: inline-block;
+    perspective: 1000px;
+    transform: translate3d(0, 0, 0);
+  }
+}

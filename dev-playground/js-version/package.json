@@ -1,0 +1,26 @@
+{
+  "name": "ping-pong",
+  "version": "1.0.0",
+  "description": "Ping Pong CSS/JS",
+  "main": "index.js",
+  "scripts": {
+    "js": "uglifyjs assets/js/master.js -o assets/js/min/master.min.js -c -m",
+    "build": "npx gulp && npm run js"
+  },
+  "author": "Alan McGinnis",
+  "license": "ISC",
+  "dependencies": {
+    "change-case": "^3.0.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-exec": "^3.0.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "pump": "^3.0.0",
+    "uglify-es": "^3.3.9"
+  }
+}

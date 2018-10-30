@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>🏓 Ping-Pong</title>
+    <link rel="stylesheet" href="../assets/css/min/master.min.css">
+</head>
+<body>
+    <div id="sb--wrapper">
+        <a href="javascript:reset()"><div id="sb--win-score">11</div></a>
+        <div id="sb--left">
+          <a href="javascript:left.increaseScore();"><div id="left-increase"></div></a>
+          <a href="javascript:left.decreaseScore();"><div id="left-decrease"></div></a>
+          <span class="score">0</span>
+        </div>
+        <div id="sb--right">
+          <a href="javascript:right.increaseScore();"><div id="right-increase"></div></a>
+          <a href="javascript:right.decreaseScore();"><div id="right-decrease"></div></a>
+          <span class="score">0</span>
+        </div>
+    </div>
+    <script type="text/javascript" src="score.js"></script>
+</body>
+</html>
